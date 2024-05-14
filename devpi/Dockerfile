@@ -1,4 +1,4 @@
-FROM python:3.8.14-slim
+FROM python:3.10-slim
 MAINTAINER Webrepublic Engineering <tech@webrepublic.com>
 
 # Set environment variables.
@@ -33,5 +33,4 @@ CMD ["devpi-server", \
      "--host", "0.0.0.0", \
      "--port", "4040", \
      "--serverdir", "/devpi/server", \
-     # Only root can create other users and their indices.
      "--restrict-modify", "root"]
